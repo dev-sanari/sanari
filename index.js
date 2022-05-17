@@ -36,7 +36,7 @@ export default class Main {
     this.#_config.directory = {
       db: args?.config?.directory.db || path.join(this.#_init.basedir, "database"),
       app: args?.config?.directory.app || path.join(this.#_init.basedir, "app")
-    }
+    };
 
     this.#starter();
   }

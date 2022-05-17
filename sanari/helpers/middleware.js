@@ -9,7 +9,6 @@ export default class Middleware
   #_req = undefined;
   #_res = undefined;
 
-
   constructor()
   {}
 
@@ -34,14 +33,17 @@ export default class Middleware
     });
   }
 
-  run(middleware)
+  run(middleware, next)
   {
 
     this.#_response = sans.helpers.response;
 
     // is exist middleware defined
     if (middleware.length > 0) {
-
+      if (next) {
+        middleware.push(next);
+      }
+      
       // validate middleware as function to call
       for (let i = 0; i < middleware.length; i++) {
         if (typeof middleware[i] != "function") {

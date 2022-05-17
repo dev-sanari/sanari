@@ -7,9 +7,7 @@ export default class Setter
   {}
 
   run()
-  {
-    console.log("SETTER");
-  }
+  {}
 
   static setup()
   {
