@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "type": "module",
-  "scripts": {},
+  "scripts": {
+    "test": "npx cross-env NODE_ENV=test jest --testTimeout=60000 --runInBand --detectOpenHandles"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/dev-sanari/sanari.git"
@@ -19,5 +21,11 @@
     "express": "^4.18.1",
     "sha1": "^1.1.1",
     "swagger-ui-express": "^4.3.0"
+  },
+  "devDependencies": {
+    "jest": "^27.4.5",
+    "jest-html-reporters": "^2.1.6",
+    "superagent": "^7.0.2",
+    "supertest": "^6.2.1"
   }
 }
