@@ -60,6 +60,5 @@ typings/
 # next.js build output
 .next
 
-
 public/report/unit-test.ejs
 public/report/jest-html-reporters-attach
